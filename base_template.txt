@@ -1,0 +1,140 @@
+```plaintext
+savage-sports/
+├── .github/                # GitHub-specific files for workflows and issue templates
+│   ├── workflows/          # CI/CD workflows (e.g., GitHub Actions)
+│   │   └── deploy.yml      # Example workflow for automated deployment
+│   └── ISSUE_TEMPLATE/     # Templates for issues
+│       └── bug_report.md
+├── backend/                # Node.js backend code
+│   ├── config/             # Configuration files
+│   │   ├── db.js           # Database connection setup
+│   │   └── apiKeys.js      # API keys and secrets
+│   ├── controllers/        # Business logic for handling routes
+│   │   ├── productController.js
+│   │   └── blogController.js
+│   ├── middlewares/        # Middleware functions for authentication, logging, etc.
+│   │   └── authMiddleware.js
+│   ├── models/             # Database models for PostgreSQL
+│   │   ├── Product.js
+│   │   └── Blog.js
+│   ├── routes/             # API route definitions
+│   │   ├── productRoutes.js
+│   │   └── blogRoutes.js
+│   ├── services/           # Services for affiliate API integration
+│   │   ├── affiliateService.js
+│   │   └── seoService.js
+│   └── index.js            # Main entry point for the backend
+├── frontend/               # React frontend code
+│   ├── public/             # Public assets (favicon, robots.txt, etc.)
+│   │   ├── favicon.ico
+│   │   └── robots.txt
+│   ├── src/                # Source code for the React app
+│   │   ├── components/     # Reusable React components
+│   │   │   ├── Header.js
+│   │   │   └── Footer.js
+│   │   ├── pages/          # Page-level components
+│   │   │   ├── HomePage.js
+│   │   │   └── ProductPage.js
+│   │   ├── styles/         # CSS or SCSS files
+│   │   │   └── main.css
+│   │   ├── utils/          # Utility functions
+│   │   │   └── apiClient.js
+│   │   ├── App.js          # Main React app entry
+│   │   └── index.js        # Main entry point for the React app
+│   └── package.json        # Dependencies for the React app
+├── db/                     # Database scripts and migrations
+│   ├── migrations/         # Migration files for schema changes
+│   │   └── 001_create_products_table.sql
+│   └── seeders/            # Seed data for initial setup
+│       └── seed_products.js
+├── tests/                  # Automated tests for backend and frontend
+│   ├── backend/            # Backend tests (e.g., Jest, Mocha)
+│   │   └── productController.test.js
+│   └── frontend/           # Frontend tests (e.g., React Testing Library)
+│       └── HomePage.test.js
+├── .env                    # Environment variables (DO NOT COMMIT TO GIT)
+├── .gitignore              # Ignore unnecessary files in Git
+├── docker-compose.yml      # Docker Compose file for local development
+├── Dockerfile              # Dockerfile for the backend
+├── package.json            # Dependencies for the backend
+└── README.md               # Documentation for the repo
+```
+
+### Explanation of Key Directories:
+1. **`.github/`**: Contains GitHub Actions workflows for CI/CD and issue templates.
+2. **`backend/`**: All backend-related code, organized into subfolders for routes, controllers, and services.
+3. **`frontend/`**: React-based frontend with reusable components, page-level views, and styles.
+4. **`db/`**: Database migrations and seeders for PostgreSQL.
+5. **`tests/`**: Separate folders for backend and frontend test cases.
+6. **Environment Files**: `.env` to store sensitive data like database credentials and API keys.
+
+### Development Workflow:
+- Use **Codespaces** to spin up this environment quickly.
+- Set up **GitHub Actions** for CI/CD workflows to automate testing and deployment.
+- Use **Docker Compose** to run the backend, frontend, and database locally.
+
+
+
+
+
+maybe we should just do a json or something like this:
+
+
+# Navigate to the workspace
+cd /workspaces/savage-sports
+
+# Create directories
+mkdir -p .github/workflows
+mkdir -p .github/ISSUE_TEMPLATE
+mkdir -p backend/config
+mkdir -p backend/controllers
+mkdir -p backend/middlewares
+mkdir -p backend/models
+mkdir -p backend/routes
+mkdir -p backend/services
+mkdir -p frontend/public
+mkdir -p frontend/src/components
+mkdir -p frontend/src/pages
+mkdir -p frontend/src/styles
+mkdir -p frontend/src/utils
+mkdir -p db/migrations
+mkdir -p db/seeders
+mkdir -p tests/backend
+mkdir -p tests/frontend
+
+# Create files
+touch .github/workflows/deploy.yml
+touch .github/ISSUE_TEMPLATE/bug_report.md
+touch backend/config/db.js
+touch backend/config/apiKeys.js
+touch backend/controllers/productController.js
+touch backend/controllers/blogController.js
+touch backend/middlewares/authMiddleware.js
+touch backend/models/Product.js
+touch backend/models/Blog.js
+touch backend/routes/productRoutes.js
+touch backend/routes/blogRoutes.js
+touch backend/services/affiliateService.js
+touch backend/services/seoService.js
+touch backend/index.js
+touch frontend/public/favicon.ico
+touch frontend/public/robots.txt
+touch frontend/src/components/Header.js
+touch frontend/src/components/Footer.js
+touch frontend/src/pages/HomePage.js
+touch frontend/src/pages/ProductPage.js
+touch frontend/src/styles/main.css
+touch frontend/src/utils/apiClient.js
+touch frontend/src/App.js
+touch frontend/src/index.js
+touch frontend/package.json
+touch db/migrations/001_create_products_table.sql
+touch db/seeders/seed_products.js
+touch tests/backend/productController.test.js
+touch tests/frontend/HomePage.test.js
+touch .env
+touch .gitignore
+touch docker-compose.yml
+touch Dockerfile
+touch package.json
+touch README.md

@@ -1,0 +1,19 @@
+{
+  "name": "savage-sports",
+  "version": "1.0.0",
+  "description": "supporting software for savage-sports.store",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.15.6"
+  }
+}
